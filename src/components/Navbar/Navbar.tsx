@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
     <div className='w-full border-b border-b-neutral-300'>
       <div className='flex-between custom-container items-center px-4 py-5 md:py-4'>
         <img
-          src='./src/assets/logo.png'
+          src='@/assets/logo.png'
           alt='Logo'
           className='h-[24px] w-[105.75px] cursor-pointer md:min-h-[36px] md:min-w-[158.62px]'
           onClick={() => {
