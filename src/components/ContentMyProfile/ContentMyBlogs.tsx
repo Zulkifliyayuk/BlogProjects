@@ -74,6 +74,8 @@ export const ContentMyBlogs: React.FC<React.ComponentProps<'div'>> = ({
                 likes={blog.likes}
                 tags={blog.tags}
                 title={blog.title}
+                page={allMyBlogs?.page}
+                limit={limit}
               />
             </div>
           ))

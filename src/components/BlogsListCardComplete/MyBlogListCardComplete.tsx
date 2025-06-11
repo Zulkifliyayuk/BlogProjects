@@ -7,7 +7,7 @@ import { StatisticDialog } from '../StatisticDialog/StatisticDialog';
 import { DeleteBlogDialog } from '../DeleteDialog/DeleteDialog';
 import { setIdBlogEdit } from '@/redux/slice/editBlogSlice';
 
-type RecommendedCardProps = {
+type MyBlogCardProps = {
   author: { id: number; name: string; email: string };
   comments: number;
   content: string;
@@ -17,9 +17,11 @@ type RecommendedCardProps = {
   likes: number;
   tags: string[];
   title: string;
+  page: number;
+  limit: number;
 };
 
-export const MyBlogsListCardComplete: React.FC<RecommendedCardProps> = ({
+export const MyBlogsListCardComplete: React.FC<MyBlogCardProps> = ({
   // comments,
   content,
   createdAt,
@@ -28,6 +30,8 @@ export const MyBlogsListCardComplete: React.FC<RecommendedCardProps> = ({
   // likes,
   tags,
   title,
+  page,
+  limit,
 }) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
@@ -152,7 +156,12 @@ export const MyBlogsListCardComplete: React.FC<RecommendedCardProps> = ({
 
       {/* DeleteBlok Dialog */}
       {showDeleteDialog && (
-        <DeleteBlogDialog handleClickDelete={handleClickDelete} idBlog={id} />
+        <DeleteBlogDialog
+          handleClickDelete={handleClickDelete}
+          idBlog={id}
+          page={page}
+          limit={limit}
+        />
       )}
       {/* End DeleteBlok Dialog  */}
 

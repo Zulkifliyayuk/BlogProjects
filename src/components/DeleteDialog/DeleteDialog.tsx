@@ -6,15 +6,19 @@ import { adjustClamp } from '@/layout/function/function';
 type DeleteBlogDialogProps = {
   idBlog: number;
   handleClickDelete: () => void;
+  page: number;
+  limit: number;
 } & React.ComponentProps<'div'>;
 
 export const DeleteBlogDialog: React.FC<DeleteBlogDialogProps> = ({
   idBlog,
   handleClickDelete,
+  page,
+  limit,
   className,
   ...props
 }) => {
-  const mutationDelete = useDeleteBlog();
+  const mutationDelete = useDeleteBlog(page, limit);
 
   const handleConfirmDelete = () => {
     mutationDelete.mutate(idBlog);
