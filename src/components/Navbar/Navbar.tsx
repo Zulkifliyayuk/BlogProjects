@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { InputSearch } from '../InputSearch/InputSearch';
 import { ActiveUserNavbar } from '../ActiveUser/ActiveUserNavbar';
 import { useMedia } from 'react-use';
+import logo from '@/assets/logo.png';
 
 export const Navbar: React.FC = () => {
   const isLargeIsh = useMedia('(min-width:768px)', false);
@@ -32,7 +33,7 @@ export const Navbar: React.FC = () => {
     <div className='w-full border-b border-b-neutral-300'>
       <div className='flex-between custom-container items-center px-4 py-5 md:py-4'>
         <img
-          src='@/assets/logo.png'
+          src={logo}
           alt='Logo'
           className='h-[24px] w-[105.75px] cursor-pointer md:min-h-[36px] md:min-w-[158.62px]'
           onClick={() => {
