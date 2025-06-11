@@ -10,7 +10,7 @@ import { useMedia } from 'react-use';
 
 import logo from '@/assets/logo.png';
 import xIcon from '@/assets/Xicon.png';
-import searchIcon from '@/assets/search-icon.png';
+import searchIcon from '@/assets/logoo.png';
 import menuIcon from '@/assets/menuIcon.png';
 import writeIcon from '@/assets/writeIcon.png';
 
